@@ -1,0 +1,80 @@
+<div class="mi-color">
+    <h1>Basics Pipes</h1>
+    <p>Pipes included in Angular - Usually in CommonModule</p>
+
+    <div class="p-grid">
+        
+        <div class="p-col p-col-md-4">
+            <p-card header="Uppercase" [subheader]="nameLower">
+                {{nameLower | uppercase}}
+            </p-card>
+        </div>
+
+        <div class="p-col p-col-md-4">
+            <p-card header="Lowercase" [subheader]="nameUpper">
+                {{nameUpper | lowercase}}
+            </p-card>
+        </div>
+
+        <div class="p-col p-col-md-4">
+            <p-card header="Titlecase" [subheader]="nameFull">
+                {{nameFull | titlecase}}
+            </p-card>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="mi-color">
+    <h1>Dates Pipe</h1>
+    <p>Pipes included in Angular - Usually in CommonModule</p>
+
+    <div class="p-grid">
+
+        <div class="p-col p-col-md-6">
+            <p-card header="">
+                <ol>
+                    <li>date without pipe</li>
+                    <li>date | date</li>
+                    <li>date | date:'short'</li>
+                    <li>date | date:'long'</li>
+                    <li>date | date:'MMMM'</li>
+                    <li>date | date:'MMMM dd, yyyy'</li>
+                </ol>
+
+                <hr>
+
+                <ol>
+                    <li>date | date:'long'</li>
+                    <li>date | date:'long': 'GTM-4'</li>
+                    <li>date | date:'long': 'GTM-6': 'es-PE'</li>
+                    <li>date | date:'long': '': 'fr'</li>
+                </ol>
+            </p-card>
+        </div>
+
+        <div class="p-col p-col-md-6">
+            <p-card header="">
+                <ol>
+                    <li>{{date}}</li>
+                    <li>{{date | date}}</li>
+                    <li>{{date | date:'short'}}</li>
+                    <li>{{date | date:'long'}}</li>
+                    <li>{{date | date:'MMMM'}}</li>
+                    <li>{{date | date:'MMMM dd, yyyy'}}</li>
+                </ol>
+
+                <hr>
+
+                <ol>
+                    <li>{{date | date:'long'}}</li>
+                    <li>{{date | date:'long': 'GMT-4'}}</li>
+                    <li>{{date | date:'long': 'GMT-6': 'es-PE'}}</li>
+                    <li>{{date | date:'long': '': 'fr'}}</li>
+                </ol>
+            </p-card>
+        </div>
+
+    </div>
+</div>

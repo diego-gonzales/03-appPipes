@@ -1,0 +1,27 @@
+<div class="mi-color">
+    <h1>Decimal and Percent Pipe</h1>
+    <p>Pipes included in Angular - Usually in CommonModule</p>
+</div>
+
+<div class="p-grid">
+        
+    <div class="p-col p-col-md-4">
+        <p-card header="Decimal" [subheader]="decimalNumber.toString()">
+            <!-- con '.2-2' le digo que quiero toda la parte entera y solo dos decimales -->
+            {{decimalNumber | number:'.2-2'}}
+        </p-card>
+    </div>
+
+    <div class="p-col p-col-md-4">
+        <p-card header="Percent" [subheader]="percent.toString()">
+            {{percent | percent: '.2-2'}}
+        </p-card>
+    </div>
+
+    <div class="p-col p-col-md-4">
+        <p-card header="Currency" [subheader]="decimalNumber.toString()">
+            {{decimalNumber | currency: 'CAD': 'symbol-narrow': '.4-4'}}
+        </p-card>
+    </div>
+
+</div>
